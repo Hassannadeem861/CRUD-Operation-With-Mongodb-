@@ -1,0 +1,15 @@
+
+.heading{
+    text-align: center;
+}
+
+.post-card{
+    box-shadow: 0px 0px 10px cornflowerblue;
+    border-radius: 10px;
+    padding: 0.5em;
+}
+
+.post-card > h3{
+
+    margin: 0;
+}

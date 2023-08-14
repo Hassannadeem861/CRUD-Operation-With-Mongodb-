@@ -1,0 +1,60 @@
+
+1. `console.log("Main external javascript hoon")`
+   Is line mein `console.log` function use kiya gaya hai jo browser ke console mein ek message print karta hai. Is line mein "Main external javascript hoon" message console mein print hoga.
+
+2. `window.createPost = function () {`
+   Yeh line "createPost" naam ka ek naya function window object ke andar create kar rahi hai. Yani aap baad mein `createPost()` likh kar is function ko call kar sakte hain.
+
+3. `let postTitle = document.querySelector('#postTitle').value`
+   Is line mein `document.querySelector('#postTitle')` se HTML mein element ko select kiya ja raha hai jiska id "postTitle" hai, aur uska `.value` attribute nikala ja raha hai. Jisse aapko post ka title mil jata hai.
+
+4. `let postText = document.querySelector('#postText').value`
+   Yeh line bhi waisi hi hai jaise line 3, lekin isme `#postText` ka use kiya gaya hai jiska id hai "postText". Isse post ka text mil jata hai.
+
+5. `axios.post('/api/v1/post', { ... })`
+   Is line mein `axios` library ka use kiya gaya hai jo server se communication ke liye hota hai. Is line mein `axios.post` function se server ko data bheja jata hai POST request ke zariye. Data mein `postTitle` aur `postText` shaamil hain.
+
+6. `.then(function (response) { ... })`
+   Yeh line ek promise chain ka hissa hai. Yani jab server se response aata hai, to yeh code block chala jata hai. Yahan pe server se aane wala response `response` variable mein store hota hai.
+
+7. `console.log(response.data)`
+   Is line mein server se aaya response ki details console mein print ho jati hai.
+
+8. `document.querySelector('#result').innerHTML = response.data`
+   Yahan pe "result" id wale HTML element ki innerHTML property ko server se aaye hue response ke data se update kiya jata hai.
+
+9. `sabhiPostsLao()`
+   Yeh ek function call hai. Isse "sabhiPostsLao" function call hoga, jo neeche define kiya gaya hai.
+
+10. `.catch(function (error) { ... })`
+    Yeh block `.then` ke baad aata hai. Yeh error handling ke liye hota hai. Agar koi error aati hai to yeh code block chala jata hai.
+
+11. `console.log(error.data)`
+    Is line mein error ke details console mein print ho jati hain.
+
+12. `document.querySelector('#result').innerHTML = 'Submission mein galti'`
+    Agar koi error aati hai to "result" id wale HTML element ki innerHTML property ko "Submission mein galti" se update kiya jata hai.
+
+13. `window.sabhiPostsLao = function () {`
+    Yeh line "sabhiPostsLao" naam ka ek naya function window object ke andar create kar rahi hai. Yani aap baad mein `sabhiPostsLao()` likh kar is function ko call kar sakte hain.
+
+14. `axios.get('/api/v1/posts')`
+    Is line mein `axios.get` function se server se data GET request ke zariye liya ja raha hai.
+
+15. `.then(function (response) { ... })`
+    Yeh line bhi ek promise chain ka hissa hai. Yani jab server se response aata hai, to yeh code block chala jata hai. Yahan pe server se aane wala response `response` variable mein store hota hai.
+
+16. `console.log(response.data)`
+    Is line mein server se aaya response ki details console mein print ho jati hai.
+
+17. `document.querySelector('#posts').innerHTML = JSON.stringify(response.data)`
+    Yahan pe "posts" id wale HTML element ki innerHTML property ko server se aaye hue response ke data ko JSON format mein convert karke update kiya jata hai.
+
+18. `.catch(function (error) { ... })`
+    Yeh block `.then` ke baad aata hai. Yeh error handling ke liye hota hai. Agar koi error aati hai to yeh code block chala jata hai.
+
+19. `console.log(error.data)`
+    Is line mein error ke details console mein print ho jati hain.
+
+20. `document.querySelector('#result').innerHTML = 'Submission mein galti'`
+    Agar koi error aati hai to "result" id wale HTML element ki innerHTML property ko "Submission mein galti" se update kiya jata hai.
