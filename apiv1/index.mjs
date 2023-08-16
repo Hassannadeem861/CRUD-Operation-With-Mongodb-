@@ -28,7 +28,7 @@ router.use((req, res, next) => {
 })
 
 // router.use(commentRouter)
-router.use(postRouter)
+router.use(postRouter) // Secure Apis
 // router.use(feedRouter)
 
 router.post("/weather", (req, res, next) => {

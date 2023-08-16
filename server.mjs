@@ -4,9 +4,9 @@
 console.log("Hello World Backend Express Routing");
 
 import express from 'express'
-import cors from 'cors'
+// import cors from 'cors'
 import path from 'path'
-import { nanoid } from 'nanoid'
+// import { nanoid } from 'nanoid'
 const __dirname = path.resolve()
 
 
@@ -14,7 +14,7 @@ import apiv1Router from './apiv1/index.mjs'
 import apiv2Router from './apiv2/index.mjs'
 
 const app = express()
-app.use(cors())
+// app.use(cors())
 app.use(express.json())  // body parser
 
 app.use("/api/v1", apiv1Router)

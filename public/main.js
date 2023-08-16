@@ -45,11 +45,12 @@ window.getAllPost = function () {
 
             response.data.map((eachPost) => {
                 postsHtml +=
-                    `<div id='card-${eachPost.id}' class="post-card">
+                    `<div id='card-${eachPost_id}' class="post-card">
                         <h3>${eachPost.title}</h3>
+                        <p>${new Date(eachPost.createdOn)}</p>
                         <p> ${eachPost.text} </p>
-                        <button onclick="delPost('${eachPost.id}')">Delete</button>
-                        <button onclick="editPost('${eachPost.id}','${eachPost.title}','${eachPost.text}', )">Edit</button>
+                        <button onclick="delPost('${eachPost_id}')">Delete</button>
+                        <button onclick="editPost('${eachPost_id}','${eachPost.title}','${eachPost.text}', )">Edit</button>
                     </div> 
                     <br />`
             })
@@ -134,13 +135,13 @@ window.savePost = (postId)=>{
 
 //                 postHtml +=
 
-//                     `<div id='card-${eachPost.id}' class='post-card'>
+//                     `<div id='card-${eachPost_id}' class='post-card'>
                 
 //                 <h3>${eachPost.title}</h3>
 //                 <p>${eachPost.text}</p>
 
-//                 <button onclick="delPost('${eachPost.id}')"><i class="bi bi-trash"></i>Delete<buttton>
-//                 <button onclick="editPost('${eachPost.id}')",'${eachPost.title}','${eachPost.text}'><i class="bi bi-pen"></i>Edit<buttton>
+//                 <button onclick="delPost('${eachPost_id}')"><i class="bi bi-trash"></i>Delete<buttton>
+//                 <button onclick="editPost('${eachPost_id}')",'${eachPost.title}','${eachPost.text}'><i class="bi bi-pen"></i>Edit<buttton>
 
 //            </div>
 //            <br/>`

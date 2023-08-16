@@ -7,6 +7,7 @@ import { MongoClient } from 'mongodb';
 // ya mera database taak gana ki rasta hain
 const uri = "mongodb+srv://Hassan-Nadeem:Hassan741883@cluster0.dnhiemd.mongodb.net/?retryWrites=true&w=majority";
 // Connect to your Atlas cluster
+// Mongodb init
 export const client = new MongoClient(uri);    
 
 async function run() {
@@ -16,7 +17,7 @@ async function run() {
         await client.connect();
         console.log("Successfully connected to Atlas");
     } catch (err) {
-        console.log(err.stack);
+        console.log(err);
         //connect is closing
         await client.close();
         //application ko exit karna
